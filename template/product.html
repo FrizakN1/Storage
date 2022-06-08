@@ -1,0 +1,15 @@
+{{define "product"}}
+    {{template "header" .}}
+        <main>
+            <div class="product_block">
+                <select class="product_input">
+                    {{range $i, $el := .Products}}
+                        <option>{{$el.Name}}</option>
+                    {{end}}
+                </select>
+                <input type="number" class="product_input" placeholder="Количество товара">
+                <div class="product_btn" id="product_btn">{{.Btn}}</div>
+            </div>
+        </main>
+    {{template "footer" .}}
+{{end}}

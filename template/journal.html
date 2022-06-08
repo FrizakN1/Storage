@@ -1,0 +1,24 @@
+{{define "journal"}}
+    {{template "header" .}}
+    <main>
+        <div class="storage">
+            <div class="storage_table">
+                <div class="table_bar">
+                    <div class="bar_element_h journal">Дата</div>
+                    <div class="bar_element_h journal">Наименование продукта</div>
+                    <div class="bar_element_h journal">Категория</div>
+                    <div class="bar_element_h journal">Движения</div>
+                </div>
+                {{range $i, $el := .Journal}}
+                    <div class="table_bar">
+                        <div class="bar_element journal">{{$el.Date}}</div>
+                        <div class="bar_element journal">{{$el.Name}}</div>
+                        <div class="bar_element journal" >{{$el.Category}}</div>
+                        <div class="bar_element journal">{{$el.Amount}}</div>
+                    </div>
+                {{end}}
+            </div>
+        </div>
+    </main>
+    {{template "footer" .}}
+{{end}}

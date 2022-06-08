@@ -1,0 +1,22 @@
+{{define "index"}}
+{{template "header" .}}
+    <main>
+        <div class="storage">
+            <div class="storage_table">
+                <div class="table_bar">
+                    <div class="bar_element_h up_width">Наименование продукта</div>
+                    <div class="bar_element_h category">Категория</div>
+                    <div class="bar_element_h">Количество</div>
+                </div>
+                {{range $i, $el := .Storage}}
+                    <div class="table_bar">
+                        <div class="bar_element up_width left_pos">{{$el.Name}}</div>
+                        <div class="bar_element category">{{$el.Category}}</div>
+                        <div class="bar_element">{{$el.Amount}}</div>
+                    </div>
+                {{end}}
+            </div>
+        </div>
+    </main>
+    {{template "footer" .}}
+{{end}}

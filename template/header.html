@@ -1,0 +1,38 @@
+{{define "header"}}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{.Title}}</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+    <header>
+        <nav>
+            <ul class="nav_btn">
+                <a href="/" class="storage_nav"><li>Склад</li></a>
+                <a href="/journal" class="storage_nav"><li>Журнал</li></a>
+                <a href="/addProduct" class="storage_nav"><li>Поступление товара</li></a>
+                <a href="/delProduct" class="storage_nav"><li>Использование товара</li></a>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        <div class="menu" id="menu">
+            <ul class="menu_btn">
+                <div class="close" id="close">
+                    <div class="bar_close rotate1"></div>
+                    <div class="bar_close rotate2"></div>
+                </div>
+                <a href="/" class="menu_nav"><li>Склад</li></a>
+                <a href="/journal" class="menu_nav"><li>Журнал</li></a>
+                <a href="/addProduct" class="menu_nav"><li>Поступление товара</li></a>
+                <a href="/delProduct" class="menu_nav"><li>Использование товара</li></a>
+            </ul>
+        </div>
+    </header>
+{{end}}
